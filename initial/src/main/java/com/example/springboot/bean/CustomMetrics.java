@@ -4,9 +4,11 @@ import org.springframework.jmx.export.annotation.ManagedAttribute;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
+import javax.management.NotificationBroadcasterSupport;
+
 @Component
-@ManagedResource(objectName= "com.example.springboot.bean:name=customMetrics" , description= "Testing: export custom metrics via jmx-exporter" )
-public class CustomMetrics
+@ManagedResource
+public class CustomMetrics extends NotificationBroadcasterSupport
 {
     @ManagedAttribute(description="CUSTOM_METRICS")
     public String getName()
