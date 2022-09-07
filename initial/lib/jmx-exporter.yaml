@@ -1,10 +1,2 @@
-startDelaySeconds: 10
-ssl: false
-lowercaseOutputName: false
-lowercaseOutputLabelNames: false
-whitelist: ["com.example.springboot.bean:name=*"]
-#whitelistObjectNames:
-#  - "com.example.springboot.bean:name=CustomBean,*"
-#  - "com.example.springboot.bean:name=CustomMetrics,*"
-#rules:
-#  - pattern: ".*"
+rules:
+  - pattern: ".*"

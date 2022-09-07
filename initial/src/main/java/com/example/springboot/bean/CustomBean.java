@@ -6,13 +6,13 @@ import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 @Component
-@ManagedResource
+@ManagedResource(objectName= "com.example.springboot.bean:type=CustomBean")
 public class CustomBean
 {
     @Value("${gateway.version}")
     private String gatewayVersion;
 
-    @ManagedAttribute(description="GATEWAY_VERSION")
+    @ManagedAttribute(description="gateway_version")
     public String getValue()
     {
         return gatewayVersion;
