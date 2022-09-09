@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 @ManagedResource(objectName= "com.example.springboot.bean:name=customMetrics")
 public class CustomMetrics
 {
-    public String customMetrics = "999";
+    public Integer customMetrics = 999;
     @ManagedAttribute(description="custom_metrics")
-    public String getCustomMetrics()
+    public Integer getCustomMetrics()
     {
         return this.customMetrics;
     }

@@ -6,8 +6,8 @@ build:
 test:
 	./mvnw test
 
-run:
-	./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+maven-run:
+	sh maven-run.sh
 
-java:
-	java ${JAVA_OPTS} -Dspring.profiles.active=env -jar target/spring-boot-initial-0.0.1-SNAPSHOT.jar
+java-run:
+	sh java-run.sh

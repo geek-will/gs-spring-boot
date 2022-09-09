@@ -8,18 +8,3 @@ server:
 
 gateway:
   version: INTERNAL_SG_STABLE_0.5.2-4
-
-management:
-  endpoint:
-    health:
-      enabled: true
-    prometheus:
-      enabled: true
-  endpoints:
-#    enabled-by-default: false
-    jmx:
-      exposure:
-        include: "*"
-    web:
-      exposure:
-        include: "*"

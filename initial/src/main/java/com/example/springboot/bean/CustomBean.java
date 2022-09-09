@@ -10,11 +10,10 @@ import org.springframework.stereotype.Component;
 @ManagedResource(objectName= "com.example.springboot.bean:name=customBean")
 public class CustomBean
 {
-    @Value("${gateway.version: INTERNAL_SG_STABLE_0.5.2-4}")
-    public String gatewayVersion;
+    public Long gatewayVersion = 911L;
 
     @ManagedAttribute(description="custom_gateway_version")
-    public String getValue()
+    public Long getValue()
     {
         return gatewayVersion;
     }
