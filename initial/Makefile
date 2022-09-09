@@ -9,5 +9,5 @@ test:
 maven-run:
 	sh maven-run.sh
 
-java-run:
+run:
 	sh java-run.sh
