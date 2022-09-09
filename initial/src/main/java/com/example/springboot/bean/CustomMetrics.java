@@ -5,7 +5,7 @@ import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 @Component
-@ManagedResource(objectName= "com.example.springboot.bean:name=CustomMetrics")
+@ManagedResource(objectName= "com.example.springboot.bean:name=customMetrics")
 public class CustomMetrics
 {
     public String customMetrics = "999";
