@@ -5,7 +5,7 @@ import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 @Component
-@ManagedResource(objectName= "com.example.springboot.bean:name=customMetrics")
+@ManagedResource(objectName= "com.sdi.presto.gateway:name=customMetrics")
 public class CustomMetrics
 {
     public Integer customMetrics = 999;

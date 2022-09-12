@@ -7,7 +7,7 @@ import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 @Component
-@ManagedResource(objectName= "com.example.springboot.bean:name=customBean")
+@ManagedResource(objectName= "com.sdi.presto.gateway:name=customBean")
 public class CustomBean
 {
     public Long gatewayVersion = 911L;
