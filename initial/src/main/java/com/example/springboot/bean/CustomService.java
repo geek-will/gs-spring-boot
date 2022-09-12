@@ -17,8 +17,6 @@ public class CustomService
 
     public String getServiceName()
     {
-        customBean.getVersion();
-        customMetrics.getCustomMetrics();
         return this.serviceName;
     }
 }

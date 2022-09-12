@@ -11,17 +11,19 @@ import org.springframework.stereotype.Component;
 public class CustomBean
 {
 //    @Value("${gateway.version}")
-    public String gatewayVersion = "INTERNAL_SG_STABLE_0.5.2-4";
+    private String gatewayVersion = "INTERNAL_SG_STABLE_0.5.2-4";
 
-    @ManagedAttribute(description="version")
-    public Long getVersion()
+    private String beanName = "custom_bean";
+
+    @ManagedAttribute(description="custom_bean_name")
+    public String getBeanName()
     {
-        return 888L;
+        return beanName;
     }
 
-    @ManagedAttribute(description="version_value")
-    public String getValue()
+    @ManagedAttribute(description="custom_bean_value")
+    public Long getBeanValue()
     {
-        return "INTERNAL_SG_STABLE_0.5.2-4";
+        return 888L;
     }
 }
