@@ -1,2 +1,10 @@
+startDelaySeconds: 0
+ssl: false
+lowercaseOutputName: true
+lowercaseOutputLabelNames: true
+#whitelistObjectNames:
+#  - "com.sdi.presto.gateway:type=CustomBean,*"
+#  - "com.sdi.presto.gateway:type=CustomMetrics,*"
+#  - "com.sdi.presto.gateway:type=ClusterStates,*"
 rules:
   - pattern: ".*"

@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.*;
 
 @Component
-@ManagedResource(objectName= "com.sdi.presto.gateway:name=clusterStates")
+@ManagedResource(objectName= "com.sdi.presto.gateway:type=ClusterStates")
 public class ClusterStates
 {
     private List<String> clusters = new ArrayList<>();
@@ -36,10 +36,16 @@ public class ClusterStates
                 ));
     }
 
-    @ManagedAttribute(description = "cluster_name_list")
+//    @ManagedAttribute(description = "cluster_name_list")
     public List<String> getClusters()
     {
         return clusters;
+    }
+
+    @ManagedAttribute(description = "cluster_name_json")
+    public String getClusterJson()
+    {
+        return "[{\"name\":\"presto-test01\"}, {\"name\":\"presto-test02\"}]";
     }
 
 //    @ManagedAttribute
