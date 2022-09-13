@@ -1,13 +1,11 @@
-#export MAVEN_OPTS="-javaagent:/Users/xxx/gs-spring-boot/initial/lib/jmx_prometheus_javaagent-0.17.0.jar=8082:/Users/xxx/gs-spring-boot/initial/lib/jmx-exporter.yaml"
+export MAVEN_OPTS=-javaagent:./lib/jmx_prometheus_javaagent-0.12.0.jar=8082:./lib/jmx-exporter.yaml
+JAVA_OPTS  := -javaagent:./lib/jmx_prometheus_javaagent-0.17.0.jar=8082:./lib/jmx-exporter.yaml
 
 build:
 	./mvnw clean install -e
 
-test:
-	./mvnw test
-
 maven-run:
-	sh maven-run.sh
+	./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
 
 run:
-	sh java-run.sh
+	java ${JAVA_OPTS} -Dspring.profiles.active=dev -jar target/spring-boot-initial-0.0.1-SNAPSHOT.jar
