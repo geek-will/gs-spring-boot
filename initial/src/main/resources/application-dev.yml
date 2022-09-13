@@ -1,29 +1,11 @@
 spring:
   env: dev
   jmx:
-    enabled: false
+    enabled: true
+    default_domain: com.example.springboot.bean
 
 server:
   port: 8081
 
 gateway:
   version: INTERNAL_SG_STABLE_0.5.2-4
-
-management:
-#  endpoint:
-#    health:
-#      enabled: true
-#    prometheus:
-#      enabled: true
-  endpoints:
-#    enabled-by-default: false
-    jmx:
-      exposure:
-        include: "*"
-    web:
-      exposure:
-        include: "*"
-    metrics:
-      export:
-        prometheus:
-          enabled: true
