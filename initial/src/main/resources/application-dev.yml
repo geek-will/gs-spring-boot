@@ -1,0 +1,4 @@
+spring:
+  env: dev
+  jmx:
+    enabled: true
