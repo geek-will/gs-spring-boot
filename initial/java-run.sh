@@ -1,3 +1,0 @@
-#export JAVA_OPTS="-javaagent:./lib/jmx_prometheus_javaagent-0.15.0.jar=8082:./lib/jmx-exporter.yaml -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false"
-export JAVA_OPTS="-javaagent:./lib/jmx_prometheus_javaagent-0.17.0.jar=8082:./lib/jmx-exporter.yaml"
-java ${JAVA_OPTS} -Dspring.profiles.active=dev -jar target/spring-boot-initial-0.0.1-SNAPSHOT.jar
