@@ -1,7 +1,0 @@
-spring:
-  env: dev
-  jmx:
-    enabled: true
-
-server:
-  port: 8081

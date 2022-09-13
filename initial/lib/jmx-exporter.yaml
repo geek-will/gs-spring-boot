@@ -1,6 +1,8 @@
-startDelaySeconds: 10
-username:
-password:
+startDelaySeconds: 0
 ssl: false
-lowercaseOutputName: false
-lowercaseOutputLabelNames: false
+lowercaseOutputName: true
+lowercaseOutputLabelNames: true
+#whitelistObjectNames:
+#  - "com.example.springboot.bean:name=customMetrics,*"
+rules:
+  - pattern: ".*"
