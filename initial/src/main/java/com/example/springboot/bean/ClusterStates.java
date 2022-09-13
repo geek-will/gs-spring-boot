@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.*;
 
 @Component
-@ManagedResource(objectName= "com.sdi.presto.gateway:type=ClusterStates")
+@ManagedResource(objectName= "com.sdi.presto.gateway:name=ClusterStates")
 public class ClusterStates
 {
     private List<String> clusters = new ArrayList<>();

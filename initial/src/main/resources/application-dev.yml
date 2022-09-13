@@ -2,7 +2,6 @@ spring:
   env: dev
   jmx:
     enabled: true
-    default_domain: com.example.springboot.bean
 
 server:
   port: 8081
