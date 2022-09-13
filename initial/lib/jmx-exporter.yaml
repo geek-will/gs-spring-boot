@@ -4,7 +4,7 @@ lowercaseOutputName: true
 lowercaseOutputLabelNames: true
 whitelistObjectNames:
   - "com.sdi.presto.gateway:name=CustomBean,*"
-  - "com.sdi.presto.gateway:name=CustomMetrics,*"
+  - "com.example.springboot.bean:name=customMetrics,*"
   - "com.sdi.presto.gateway:name=ClusterStates,*"
   - "com.sdi.presto.gateway:name=CustomServiceImpl,*"
 rules:

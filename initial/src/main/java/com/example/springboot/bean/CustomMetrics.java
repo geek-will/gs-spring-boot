@@ -1,21 +1,30 @@
 package com.example.springboot.bean;
 
 import org.springframework.jmx.export.annotation.ManagedAttribute;
+import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 @Component
-@ManagedResource(objectName= "com.sdi.presto.gateway:name=CustomMetrics")
+@ManagedResource
 public class CustomMetrics
 {
-    public Integer customMetrics = 999;
+    private String metricsName = "custom_metrics";
+    private Integer customMetrics = 999;
 
-    @ManagedAttribute(description="custom_metrics_name")
-    public String getMetricsName()
+    @ManagedOperation
+    public String getCustomMetrics()
     {
         return "custom_metrics";
     }
-    @ManagedAttribute(description="custom_metrics_value")
+
+    @ManagedAttribute
+    public String getMetricsName()
+    {
+        return metricsName;
+    }
+
+    @ManagedAttribute
     public Integer getMetricsValue()
     {
         return this.customMetrics;
