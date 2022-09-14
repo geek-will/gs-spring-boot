@@ -7,5 +7,11 @@ build:
 maven-run:
 	./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
 
-run:
+java-run:
 	java ${JAVA_OPTS} -Dspring.profiles.active=dev -jar target/spring-boot-initial-0.0.1-SNAPSHOT.jar
+
+run:
+	make build java-run
+
+jmxterm:
+	java -jar ./lib/jmxterm-1.0.2-uber.jar
