@@ -8,6 +8,7 @@ import org.springframework.jmx.export.assembler.AbstractMBeanInfoAssembler;
 import org.springframework.jmx.support.MetricType;
 import org.springframework.stereotype.Component;
 
+import java.lang.management.MemoryPoolMXBean;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,11 +17,17 @@ import java.util.Map;
 public class CustomMetrics
 {
     private String customMetricsName = "custom_metrics_name";
+    private int customMetricsValue = 888;
 
-    @ManagedAttribute(persistPolicy = "Always")
+    @ManagedAttribute(defaultValue="custom_metrics_name", persistPeriod=300)
     public String getCustomMetricsName()
     {
         return customMetricsName;
+    }
+
+    @ManagedAttribute
+    public void setCustomMetricsName(String customMetricsName) {
+        this.customMetricsName = customMetricsName;
     }
 
     @ManagedOperation
@@ -31,9 +38,14 @@ public class CustomMetrics
         return map;
     }
 
-    @ManagedMetric(displayName = "custom_metric_value")
+    @ManagedAttribute
     public Integer getCustomMetricsValue()
     {
-        return 888;
+        return customMetricsValue;
+    }
+
+    @ManagedAttribute
+    public void setCustomMetricsValue(Integer customMetricsValue) {
+        this.customMetricsValue = customMetricsValue;
     }
 }

@@ -2,3 +2,25 @@ spring:
   env: dev
   jmx:
     enabled: true
+
+server:
+  port: 8081
+
+management:
+  endpoint:
+    health:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    enabled-by-default: false
+    jmx:
+      exposure:
+        include: "*"
+    web:
+      exposure:
+        include: "*"
+    metrics:
+      export:
+        prometheus:
+          enabled: true
