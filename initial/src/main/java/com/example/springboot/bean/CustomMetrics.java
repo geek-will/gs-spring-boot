@@ -17,7 +17,7 @@ public class CustomMetrics
 {
     private String customMetricsName = "custom_metrics_name";
 
-    @ManagedAttribute
+    @ManagedAttribute(persistPolicy = "Always")
     public String getCustomMetricsName()
     {
         return customMetricsName;
@@ -31,15 +31,9 @@ public class CustomMetrics
         return map;
     }
 
-    @ManagedAttribute
+    @ManagedMetric(displayName = "custom_metric_value")
     public Integer getCustomMetricsValue()
     {
         return 888;
     }
-
-//    public static class MyMBeanInfoAssembler
-//            extends AbstractMBeanInfoAssembler
-//    {
-//
-//    }
 }
