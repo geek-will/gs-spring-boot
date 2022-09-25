@@ -1,8 +1,12 @@
 startDelaySeconds: 0
 ssl: false
-lowercaseOutputName: true
-lowercaseOutputLabelNames: true
+#lowercaseOutputName: true
+#lowercaseOutputLabelNames: true
 #whitelistObjectNames:
 #  - "com.example.springboot.bean:name=customMetrics,*"
+#rules:
+#  - pattern: ".*"
 rules:
-  - pattern: ".*"
+  - pattern: 'com.example.springboot.bean(.*)'
+    name: presto_gateway_custom_metrics
+    help: "$1"
